@@ -1,0 +1,245 @@
+
+<md-sidenav class="md-sidenav-right" md-component-id="right" md-whiteframe="4">
+  <md-toolbar class="md-hue-2">
+    <md-button ng-click="$ctrl.closeSideNav()" style="text-align:right; height:64px; margin:0; padding-right:30px;">
+      <md-icon md-font-library="material-icons"> close </md-icon>
+    </md-button>
+  </md-toolbar>
+  <md-content layout="column" layout-padding>
+    <md-button du-smooth-scroll="section-00" du-scrollspy ng-click="$ctrl.closeSideNav()">Home</md-button>
+    <md-button du-smooth-scroll="section-10" du-scrollspy ng-click="$ctrl.closeSideNav()">Services</md-button>
+    <md-button du-smooth-scroll="section-20" du-scrollspy ng-click="$ctrl.closeSideNav()">Our Clients</md-button>
+    <md-button du-smooth-scroll="section-30" du-scrollspy ng-click="$ctrl.closeSideNav()">About</md-button>
+    <md-button du-smooth-scroll="section-40" du-scrollspy ng-click="$ctrl.closeSideNav()">Contact</md-button>
+  </md-content>
+</md-sidenav>
+
+<nav-bar style="position:fixed; z-index:50; top:0; width:100%;" on-menu-click="$ctrl.toggleSideNav()">Foo</nav-bar>
+
+<div style="height:90%; overflow:hidden;">
+  <video class="OF-cover" id="section-00" autoplay loop>
+    <source type="video/mp4" src="https://ws17710.blob.core.windows.net/remington-media/stationary-engeneers-at-work-511885728_Web-640x360-%40-25-fps-H.264.mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div flex layout-padding style="color: white; background: rgba(66, 66, 66, 0.6); position:absolute; width:100%; top:35%; left:0; text-align:center;">
+    <div class="md-display-1">Delivering value to our commercial clients through cutting-edge technology</div>
+    <div class="md-title">Building maintenance and renovation services</div>
+    <div class="md-title">in Washington DC, MD and VA</div>
+  </div>
+</div>
+
+<div id="section-10" layout="column" layout-align="center center">
+  <div layout-padding class="md-display-1">Our Services</div>
+  <div layout="row" layout-wrap layout-align="center center">
+    <md-card class="service-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('construction-services', $event)">
+      <img src="components/app/services/construction-services/construction-services-service-card.jpeg" />
+      <div class="service-title md-title">Construction Services</div>
+      <div class="service-text md-body-1">
+        Remington Construction focuses on tenant improvement and other commercial build-outs. We specialize in remodeling occupied spaces and multi-family unit renovations. We perform general repairs to buildings and preventive maintenance of systems and equipment.
+      </div>
+      <div flex></div>
+      <md-button class="service-more-btn">Read More ...</md-button>
+    </md-card>
+    <md-card class="service-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('hvac', $event)">
+      <img src="components/app/services/hvac/hvac-service-card.jpeg" />
+      <div class="service-title md-title">HVAC</div>
+      <div class="service-text md-body-1">
+        The right climate control system will deliver a comfortable working environment that makes for healthier, happier and ultimately, more productive people. Our HVAC installation technicians will ensure that your equipment is the right fit for your building and that it is appropriately sized.
+      </div>
+      <div flex></div>
+      <md-button class="service-more-btn">Read More ...</md-button>
+    </md-card>
+    <md-card class="service-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('plumbing', $event)">
+      <img src="components/app/services/plumbing/plumbing-service-card.jpg" />
+      <div class="service-title md-title">Plumbing</div>
+      <div class="service-text md-body-1">
+        Plumbing problems in a commercial location can greatly affect how your business operates. That's why we install pipes that don't fail, and we do it with the lowest environmental impact possible. We can provide value engineering on the design side with a cost- effective plumbing system.
+      </div>
+      <div flex></div>
+      <md-button class="service-more-btn">Read More ...</md-button>
+    </md-card>
+    <md-card class="service-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('garage-and-deck-coatings', $event)">
+      <img src="components/app/services/garage-and-deck-coatings/garage-and-deck-coatings-service-card.jpeg" />
+      <div class="service-title md-title">Garage and Deck Coatings</div>
+      <div class="service-text md-body-1">
+        Parking structures are faced with a unique set of challenges. Concrete resurfacing & finishing offers an economical solution for prolonging the life of your parking structure to replacing it. 
+        We offer a wide range of polyurethane and epoxy traffic coatings that provide durability and flexibility that meets the most demanding service conditions.
+      </div>
+      <div flex></div>
+      <md-button class="service-more-btn">Read More ...</md-button>
+    </md-card>
+  </div>
+</div>
+
+<md-card id="section-20" layout="column" layout-align="center center" class="main-card">
+	<div layout-padding class="md-display-1">Our Clients</div>
+  <div layout layout-wrap layout-padding layout-align="space-around center" style="width:100%;">
+    <div><img src="components/app/Associa.svg" width="180" /></div>
+    <div><img src="components/app/Gates Hudson logo.jpg" width="200" /></div>
+    <div><img src="components/app/pcg.png" width="130" /></div>
+    <div><img src="components/app/wolverine.png" width="180" /></div>
+  </div>
+</md-card>
+
+<md-card id="section-30" layout="column" layout-padding layout-align="center center" class="main-card about-card" style="margin-top:18px;" ng-click="$ctrl.openDialog('about', $event)">
+  <div class="md-display-1">About</div>
+  <div class="md-subhead">
+
+    <p class="md-title" style="font-weight: bold;">Why choose Remington Construction?</p>
+    <p>We provide our clients with valuable expertise, high quality service and state-of-the-art technology and materials for all your building maintenance and construction needs. We specialize in commercial, industrial, institutional, educational, medical and multi-unit markets throughout MD, VA and Washington D.C.</p>
+
+    <img class="OF-cover" style="height: 200px;" src="components/app/About Banner-530188853_971x364.jpeg" />
+
+    <p style="padding-bottom:0; font-weight: bold;">Value Engineering</p>
+    <p>Our project team is highly skilled in finding creative ways to reduce costs while maintaining quality, function, and aesthetics. We design, estimate and self-perform most of the work that yields the best final cost to you, our client.</p>
+
+    <p style="padding-bottom:0; font-weight: bold;">Service When You Need It</p>
+    <p>We reply to inquiries promptly! We include personalized service and a timely turnaround into every project we are a part of. Starting with estimating, we give you an accurate understanding of the project costs. We believe that it is our job to not just deliver successful outcomes, but also a smooth, enjoyable process that respects project owners’ investments. Our integrity and professionalism enables us to provide unsurpassed accountability for every client.</p>
+
+    <p style="padding-bottom:0; font-weight: bold;">Innovation & Sustainability</p>
+    <p>We embrace the newest technological developments in our industry and offer our clients superior products that make their projects safer, more energy efficient, offer extended life span and provide greater environmental sustainability. 
+    Remington is dedicated to becoming the leader in embracing those technologies that help our clients meet and exceed building and energy codes for commercial buildings.</p>
+
+    <p style="font-weight: bold;">Remington Construction offers a full line of construction and maintenance services for your building’s needs. We place a special emphasis on quality construction and customer service and are 100% committed to client satisfaction and repeat business!</p>
+    
+    <md-button class="service-more-btn">Read More ...</md-button>
+  </div>
+</md-card>
+
+<div id="section-40" layout="column" layout-gt-sm="row" class="main-card">
+
+  <md-card layout="column" layout-align="start center" layout-padding flex>
+    <div layout-padding class="md-display-1">Tell Us About Your Project</div>
+    <!--<div class="md-subhead">We are happy to talk with you!</div>-->
+    <div layout="column" style="width: 90%;" class="disabled-color">
+      <form layout="column" name="contactForm" ng-hide="$ctrl.contactSent">
+        <md-input-container class="md-block">
+          <label>Your Name</label>
+          <input required name="name" ng-model="$ctrl.contact.name">
+          <div ng-messages="contactForm.name.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Company</label>
+          <input name="company" ng-model="$ctrl.contact.company">
+        </md-input-container>
+        <!--<md-input-container class="md-block" flex-gt-xs>
+          <label>Project Type</label>
+          <md-select name="type" ng-model="$ctrl.contact.type" required>
+            <md-option value="app">Application</md-option>
+            <md-option value="web">Website</md-option>
+          </md-select>
+        </md-input-container>-->
+        <md-input-container class="md-block">
+          <label>Email</label>
+          <input required md-select-on-focus type="email" name="email" ng-model="$ctrl.contact.email" minlength="9" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+          <div ng-messages="contactForm.email.$error">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">Your email must be between 9 and 100 characters long and look like an e-mail address.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Phone</label>
+          <input md-select-on-focus name="phone" ng-model="$ctrl.contact.phone" ng-pattern="/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/" />
+          <div class="hint" ng-show="showHints">(###) ###-####</div>
+          <div ng-messages="contactForm.phone.$error" ng-hide="showHints">
+            <div ng-message="pattern">(###) ###-#### - Please enter a valid phone number.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Message</label>
+          <textarea rows="5" md-maxlength="1000" md-select-on-focus md-no-asterisk name="message" ng-model="$ctrl.contact.message"></textarea>
+          <div ng-messages="contactForm.message.$error">
+            <div ng-message="md-maxlength">The message must be less than 1000 characters long.</div>
+          </div>
+        </md-input-container>
+      </form>
+      <div layout layout-align="center" class="md-body-2" ng-style="{ 'padding-top': '10px', 'color' : $ctrl.contactMessageColor }">{{$ctrl.contactMessage}}</div>
+      <md-button class="md-accent md-raised md-hue-2" ng-hide="$ctrl.contactSent" ng-disabled="!contactForm.$valid" ng-click="$ctrl.contactRequest()" style="padding: 8px 16px;">Send Message</md-button>
+    </div>
+  </md-card>
+
+  <md-card layout="column" layout-align="start center" layout-padding flex>
+    <div layout="column" layout-align="start center">
+      <div layout-padding class="md-display-1">Contact Details</div>
+      <div layout="column" layout-align="center center">
+        <div class="md-subhead">Monday - Friday</div>
+        <div class="md-body-2" style="font-weight: bold;">9:00am - 5:00pm</div>
+      </div>
+    </div>
+    <div layout="column" layout-align="start start">
+      <div layout="row">
+        <div layout layout-align="start center">
+          <md-button class="md-fab md-mini md-primary md-hue-1" href="tel:703-992-0909" aria-label="phone">
+            <md-icon md-font-library="material-icons">phone</md-icon>
+          </md-button>
+        </div>
+        <div style="padding-left:15px;">
+          <div class="md-subhead" style="padding-top:5px;">PHONE</div>
+          <div class="md-body-2" style="padding-top:0px; font-weight: bold;">(703) 992-0909</div>
+        </div>
+      </div>
+
+      <div layout="row" style="padding-top:15px;">
+        <div layout layout-align="start center">
+          <md-button class="md-fab md-mini md-primary md-hue-1" aria-label="fax">
+            <md-icon md-font-library="material-icons">ring_volume</md-icon>
+          </md-button>
+        </div>
+        <div style="padding-left:15px;">
+          <div class="md-subhead" style="padding-top:5px;">FAX</div>
+          <div class="md-body-2" style="padding-top:0px; font-weight: bold;">(703) 992-9912</div>
+        </div>
+      </div>
+
+      <div class="md-body-1" layout="row" style="padding-top:15px;">
+        <div layout layout-align="start center">
+          <md-button class="md-fab md-mini md-primary md-hue-1" href="mailto:info@remingtondc.com?subject=Remington Construction Website Inquiry" aria-label="email">
+            <md-icon md-font-library="material-icons">email</md-icon>
+          </md-button>
+        </div>
+        <div style="padding-left:15px;">
+          <div class="md-subhead" style="padding-top:5px;">EMAIL</div>
+          <div class="md-body-2" style="padding-top:0px; font-weight: bold;">info@remingtondc.com</div>
+        </div>
+      </div>
+
+      <div class="md-body-1" layout="row" style="padding-top:15px;">
+        <div layout layout-align="start center">
+          <md-button class="md-fab md-mini md-primary md-hue-1" href="https://www.google.com/maps/place/Remington+Construction/@38.9331922,-77.2371556,17z/data=!4m13!1m7!3m6!1s0x89b64a8bd2722a3d:0x9072d04dffb131aa!2s8466+Tyco+Rd,+Vienna,+VA+22182!3b1!8m2!3d38.9333508!4d-77.2376706!3m4!1s0x89b64a8a2d49a143:0x25038e76bc5c426f!8m2!3d38.9333508!4d-77.2376706" target="_blank" aria-label="address">
+            <md-icon md-font-library="material-icons">location_on</md-icon>
+          </md-button>
+        </div>
+        <div style="padding-left:15px;">
+          <div class="md-subhead" style="padding-top:5px;">ADDRESS</div>
+          <div class="md-body-2" style="padding-top:0px; font-weight: bold;">8466-B Tyco Road</div>
+          <div class="md-body-2" style="padding-top:0px; font-weight: bold;">Vienna, VA 22182</div>
+        </div>
+      </div>
+    </div>
+  </md-card>
+</div>
+
+<md-card class="main-card">
+  <img src="components/app/Remington_Construction_-_Google_Maps.jpg" class="OF-cover" style="height:500px;" />
+</md-card>
+
+<div id="section-40" flex layout="row" layout-wrap layout-padding class="main-card">
+  <div flex></div>
+  <div class="md-caption" layout="column" layout-align="end end">
+    <div layout="row" style="padding-bottom: 10px;">
+      <div><a href="//www.linkedin.com/company/remington-construction?trk=top_nav_home" title="LinkedIn - Remington Construction" target="_blank"><i class="fa fa-linkedin footer-social"></i></a></div>
+      <div><a href="//twitter.com/RemingtonDcCo/" title="Twitter - Remington Construction" target="_blank"><i class="fa fa-twitter footer-social"></i></a></div>
+      <div><a href="//www.facebook.com/RemingtonDcCo/" title="Facebook - Remington Construction" target="_blank"><i class="fa fa-facebook footer-social"></i></a></div>
+      <div><a href="//plus.google.com/109466100403259972754?hl=en" title="Google Plus - Remington Construction" target="_blank"><i class="fa fa-google-plus footer-social"></i></a></div>
+      <!--<div><a href="instagram://user?username=RemingtonDcCo" title="Instagram - Remington Construction"><i class="fa fa-instagram footer-social"></i></a></div>-->
+    </div>
+    <div class="md-title" style="padding-bottom: 10px;">(703) 992-0909</div>
+    <div style="padding-bottom: 5px;">© Copyright {{$ctrl.today.getFullYear()}} Remington Construction. All rights reserved.</div>
+    <div>
+      <md-button style="margin: 0;" ng-click="$ctrl.openDialog('privacy', $event)">Privacy Policy</md-button>
+      <md-button style="margin: 0px; padding-right: 0px;" ng-click="$ctrl.openDialog('terms', $event)">Terms and Conditions</md-button>
+      <!--<md-button ng-click="$ctrl.openDialog('use', $event)">Acceptable Usage Policy</md-button>-->
+    </div>
+  </div>
+</div>

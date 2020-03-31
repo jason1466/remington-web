@@ -31,15 +31,6 @@
 <div id="section-10" layout="column" layout-align="center center">
   <div layout-padding class="md-display-1">Our Services</div>
   <div layout="row" layout-wrap layout-align="center center">
-    <md-card class="service-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('construction-services', $event)">
-      <img src="components/app/services/construction-services/construction-services-service-card.jpeg" />
-      <div class="service-title md-title">Construction Services</div>
-      <div class="service-text md-body-1">
-        Remington Construction focuses on tenant improvement and other commercial build-outs. We specialize in remodeling occupied spaces and multi-family unit renovations. We perform general repairs to buildings and preventive maintenance of systems and equipment.
-      </div>
-      <div flex></div>
-      <md-button class="service-more-btn">Read More ...</md-button>
-    </md-card>
     <md-card class="service-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('hvac', $event)">
       <img src="components/app/services/hvac/hvac-service-card.jpeg" />
       <div class="service-title md-title">HVAC</div>
@@ -58,12 +49,11 @@
       <div flex></div>
       <md-button class="service-more-btn">Read More ...</md-button>
     </md-card>
-    <md-card class="service-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('garage-and-deck-coatings', $event)">
-      <img src="components/app/services/garage-and-deck-coatings/garage-and-deck-coatings-service-card.jpeg" />
-      <div class="service-title md-title">Garage and Deck Coatings</div>
+    <md-card class="service-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('construction-services', $event)">
+      <img src="components/app/services/construction-services/construction-services-service-card.jpeg" />
+      <div class="service-title md-title">Construction Services</div>
       <div class="service-text md-body-1">
-        Parking structures are faced with a unique set of challenges. Concrete resurfacing & finishing offers an economical solution for prolonging the life of your parking structure to replacing it. 
-        We offer a wide range of polyurethane and epoxy traffic coatings that provide durability and flexibility that meets the most demanding service conditions.
+        Remington Construction focuses on tenant improvement and other commercial build-outs. We specialize in remodeling occupied spaces and multi-family unit renovations. We perform general repairs to buildings and preventive maintenance of systems and equipment.
       </div>
       <div flex></div>
       <md-button class="service-more-btn">Read More ...</md-button>
@@ -107,57 +97,6 @@
 </md-card>
 
 <div id="section-40" layout="column" layout-gt-sm="row" class="main-card">
-
-  <md-card layout="column" layout-align="start center" layout-padding flex>
-    <div layout-padding class="md-display-1">Tell Us About Your Project</div>
-    <!--<div class="md-subhead">We are happy to talk with you!</div>-->
-    <div layout="column" style="width: 90%;" class="disabled-color">
-      <form layout="column" name="contactForm" ng-hide="$ctrl.contactSent">
-        <md-input-container class="md-block">
-          <label>Your Name</label>
-          <input required name="name" ng-model="$ctrl.contact.name">
-          <div ng-messages="contactForm.name.$error">
-            <div ng-message="required">This is required.</div>
-          </div>
-        </md-input-container>
-        <md-input-container class="md-block">
-          <label>Company</label>
-          <input name="company" ng-model="$ctrl.contact.company">
-        </md-input-container>
-        <!--<md-input-container class="md-block" flex-gt-xs>
-          <label>Project Type</label>
-          <md-select name="type" ng-model="$ctrl.contact.type" required>
-            <md-option value="app">Application</md-option>
-            <md-option value="web">Website</md-option>
-          </md-select>
-        </md-input-container>-->
-        <md-input-container class="md-block">
-          <label>Email</label>
-          <input required md-select-on-focus type="email" name="email" ng-model="$ctrl.contact.email" minlength="9" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-          <div ng-messages="contactForm.email.$error">
-            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">Your email must be between 9 and 100 characters long and look like an e-mail address.</div>
-          </div>
-        </md-input-container>
-        <md-input-container class="md-block">
-          <label>Phone</label>
-          <input md-select-on-focus name="phone" ng-model="$ctrl.contact.phone" ng-pattern="/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/" />
-          <div class="hint" ng-show="showHints">(###) ###-####</div>
-          <div ng-messages="contactForm.phone.$error" ng-hide="showHints">
-            <div ng-message="pattern">(###) ###-#### - Please enter a valid phone number.</div>
-          </div>
-        </md-input-container>
-        <md-input-container class="md-block">
-          <label>Message</label>
-          <textarea rows="5" md-maxlength="1000" md-select-on-focus md-no-asterisk name="message" ng-model="$ctrl.contact.message"></textarea>
-          <div ng-messages="contactForm.message.$error">
-            <div ng-message="md-maxlength">The message must be less than 1000 characters long.</div>
-          </div>
-        </md-input-container>
-      </form>
-      <div layout layout-align="center" class="md-body-2" ng-style="{ 'padding-top': '10px', 'color' : $ctrl.contactMessageColor }">{{$ctrl.contactMessage}}</div>
-      <md-button class="md-accent md-raised md-hue-2" ng-hide="$ctrl.contactSent" ng-disabled="!contactForm.$valid" ng-click="$ctrl.contactRequest()" style="padding: 8px 16px;">Send Message</md-button>
-    </div>
-  </md-card>
 
   <md-card layout="column" layout-align="start center" layout-padding flex>
     <div layout="column" layout-align="start center">
@@ -218,10 +157,64 @@
       </div>
     </div>
   </md-card>
+
+  <md-card layout="column" layout-align="start center" layout-padding flex>
+    <div layout-padding class="md-display-1">Tell Us About Your Project</div>
+    <!--<div class="md-subhead">We are happy to talk with you!</div>-->
+    <div layout="column" style="width: 90%;" class="disabled-color">
+      <form layout="column" name="contactForm" ng-hide="$ctrl.contactSent">
+        <md-input-container class="md-block">
+          <label>Your Name</label>
+          <input required name="name" ng-model="$ctrl.contact.name">
+          <div ng-messages="contactForm.name.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Company</label>
+          <input name="company" ng-model="$ctrl.contact.company">
+        </md-input-container>
+        <!--<md-input-container class="md-block" flex-gt-xs>
+          <label>Project Type</label>
+          <md-select name="type" ng-model="$ctrl.contact.type" required>
+            <md-option value="app">Application</md-option>
+            <md-option value="web">Website</md-option>
+          </md-select>
+        </md-input-container>-->
+        <md-input-container class="md-block">
+          <label>Email</label>
+          <input required md-select-on-focus type="email" name="email" ng-model="$ctrl.contact.email" minlength="9" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+          <div ng-messages="contactForm.email.$error">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">Your email must be between 9 and 100 characters long and look like an e-mail address.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Phone</label>
+          <input md-select-on-focus name="phone" ng-model="$ctrl.contact.phone" ng-pattern="/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/" />
+          <div class="hint" ng-show="showHints">(###) ###-####</div>
+          <div ng-messages="contactForm.phone.$error" ng-hide="showHints">
+            <div ng-message="pattern">(###) ###-#### - Please enter a valid phone number.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label>Message</label>
+          <textarea rows="5" md-maxlength="1000" md-select-on-focus md-no-asterisk name="message" ng-model="$ctrl.contact.message"></textarea>
+          <div ng-messages="contactForm.message.$error">
+            <div ng-message="md-maxlength">The message must be less than 1000 characters long.</div>
+          </div>
+        </md-input-container>
+      </form>
+      <div layout layout-align="center" class="md-body-2" ng-style="{ 'padding-top': '10px', 'color' : $ctrl.contactMessageColor }">{{$ctrl.contactMessage}}</div>
+      <md-button class="md-accent md-raised md-hue-2" ng-hide="$ctrl.contactSent" ng-disabled="!contactForm.$valid" ng-click="$ctrl.contactRequest()" style="padding: 8px 16px;">Send Message</md-button>
+    </div>
+  </md-card>
+
 </div>
 
 <md-card class="main-card">
-  <img src="components/app/Remington_Construction_-_Google_Maps.jpg" class="OF-cover" style="height:500px;" />
+  <a href="https://www.google.com/maps/dir//Remington+Construction,+Tyco+Road,+Vienna,+VA/@38.933385,-77.2376381,17z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x89b64a8a2d49a143:0x25038e76bc5c426f!2m2!1d-77.2376706!2d38.9333508!5m1!1e1">
+    <img src="components/app/Remington_Construction_-_Google_Maps.jpg" class="OF-cover" style="height:500px;" />
+  </a>
 </md-card>
 
 <div id="section-40" flex layout="row" layout-wrap layout-padding class="main-card">

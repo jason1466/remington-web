@@ -9,6 +9,7 @@
     <md-button du-smooth-scroll="section-00" du-scrollspy ng-click="$ctrl.closeSideNav()">Home</md-button>
     <md-button du-smooth-scroll="section-10" du-scrollspy ng-click="$ctrl.closeSideNav()">Services</md-button>
     <md-button du-smooth-scroll="section-20" du-scrollspy ng-click="$ctrl.closeSideNav()">Our Clients</md-button>
+    <md-button du-smooth-scroll="section-25" du-scrollspy ng-click="$ctrl.closeSideNav()">Projects</md-button>
     <md-button du-smooth-scroll="section-30" du-scrollspy ng-click="$ctrl.closeSideNav()">About</md-button>
     <md-button du-smooth-scroll="section-40" du-scrollspy ng-click="$ctrl.closeSideNav()">Contact</md-button>
   </md-content>
@@ -60,6 +61,77 @@
       <md-button class="service-more-btn">Read More ...</md-button>
     </md-card>
   </div>
+</div>
+
+<div id="section-25" layout="column" layout-align="center center">
+  <div layout-padding class="md-display-1">Multi Family Projects</div>
+  <div layout="row" layout-wrap layout-align="center center">
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('projects/1661CrescentPlace/1661CrescentPlace', $event)">
+      <img src="components/app/projects/1661CrescentPlace/7Q5-Ql-k.jpeg" />
+      <div class="project-title md-subhead">1661 Crescent Place</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('projects/ForestGlenSeniorLivingFacility/ForestGlenSeniorLivingFacility', $event)">
+      <img src="components/app/projects/ForestGlenSeniorLivingFacility/IMG_7347.JPG" />
+      <div class="project-title md-subhead">Forest Glen</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('projects/MacombHouse/MacombHouse', $event)">
+      <img src="components/app/projects/MacombHouse/IMG_6173.jpg" />
+      <div class="project-title md-subhead">Macomb House</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('hvac', $event)">
+      <img src=""  />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('plumbing', $event)">
+      <img src="" />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('construction-services', $event)">
+      <img src="" />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+  </div>
+
+  <div layout-padding class="md-display-1">Commercial Projects</div>
+  <div layout="row" layout-wrap layout-align="center center">
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('hvac', $event)">
+      <img src=""  />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('plumbing', $event)">
+      <img src="" />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('construction-services', $event)">
+      <img src="" />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('hvac', $event)">
+      <img src=""  />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('plumbing', $event)">
+      <img src="" />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+    <md-card class="project-card" layout="column" layout-align="start center" ng-click="$ctrl.openDialog('construction-services', $event)">
+      <img src="" />
+      <div class="project-title md-subhead">CCC</div>
+      <md-button class="project-more-btn">Open ...</md-button>
+    </md-card>
+  </div>
+
 </div>
 
 <md-card id="section-20" layout="column" layout-align="center center" class="main-card">
@@ -225,7 +297,6 @@
       <div><a href="//www.linkedin.com/company/remington-construction?trk=top_nav_home" title="LinkedIn - Remington Construction" target="_blank"><i class="fa fa-linkedin footer-social"></i></a></div>
       <div><a href="//twitter.com/RemingtonDcCo/" title="Twitter - Remington Construction" target="_blank"><i class="fa fa-twitter footer-social"></i></a></div>
       <div><a href="//www.facebook.com/RemingtonDcCo/" title="Facebook - Remington Construction" target="_blank"><i class="fa fa-facebook footer-social"></i></a></div>
-      <div><a href="//plus.google.com/109466100403259972754?hl=en" title="Google Plus - Remington Construction" target="_blank"><i class="fa fa-google-plus footer-social"></i></a></div>
       <!--<div><a href="instagram://user?username=RemingtonDcCo" title="Instagram - Remington Construction"><i class="fa fa-instagram footer-social"></i></a></div>-->
     </div>
     <div class="md-title" style="padding-bottom: 10px;">(703) 992-0909</div>

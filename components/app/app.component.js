@@ -29,8 +29,8 @@
         //this.$onDestroy = 
         //this.$postLink = 
         //this.$routerOnActivate = 
-        this.$onInit = function () {
-            $log.debug('AppComponent.$onInit - ', this, arguments);
+        // this.$onInit = function () {
+            // $log.debug('AppComponent.$onInit - ', this, arguments);
             
             //document.querySelector(objectFitImages.supportsObjectFit ? '.of-supported' : '.of-not-supported').style.display = 'block';
             //objectFitImages();
@@ -48,7 +48,7 @@
             //     }).
             //     error(function (data, status, headers, config) {
             //     });
-        };
+        // };
 
         //
         // private properties with defaults
@@ -78,7 +78,7 @@
             // Component lookup should always be available since we are not using `ng-if`
             $mdSidenav('right').close()
                 .then(function () {
-                    $log.debug("closed right");
+                    // $log.debug("closed right");
                 });
         };
 
@@ -88,7 +88,7 @@
                 $mdSidenav(navID)
                     .toggle()
                     .then(function () {
-                        $log.debug("toggled " + navID);
+                        // $log.debug("toggled " + navID);
                     });
             }
         }
@@ -106,7 +106,7 @@
                 .then(function (target) {
                 $ctrl.openDialog(target);
             }, function () {
-                    $log.debug("You cancelled the dialog.");
+                    // $log.debug("You cancelled the dialog.");
                 });
         };
 
@@ -189,10 +189,10 @@ $ctrl.validateNewsletterRequest = validateNewsletterRequest;
                     "body": body
                 }
             }).then(function (response) {
-                $log.debug("Email request sent. Status response: " + response.status + "\nData response: " + response.data);
+                // $log.debug("Email request sent. Status response: " + response.status + "\nData response: " + response.data);
                 $ctrl.sendOk = true;
             }, function (response) {
-                    $log.error("Email failed to send. Status response: " + response.status + "\nData response: " + response.data);
+                    // $log.error("Email failed to send. Status response: " + response.status + "\nData response: " + response.data);
                     $ctrl.sendOk = false;
                 });
         }
